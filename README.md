@@ -2,7 +2,7 @@
 <h3 align="center">Página web que conecta doadores a beneficiários na cidade de São Carlos - SP </h3>
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/> </p>
-<p align="justify"> <strong> Descrição: </strong> O Projeto Colmeia visa criar uma página de acesso para pessoas aproximar pessoas que precisam em situação de vulnerabilidade socioeconômica e pessoas que querem ajudar por meio de doações de itens essenciais. Durante a primeira versão do projeto optamos por escolher uma região para implantação de teste. 
+<p align="justify"> <strong> Descrição: </strong> O Projeto Colmeia visa criar um site para pessoas aproximar pessoas que se encontram  situação de vulnerabilidade socioeconômica e pessoas que querem ajudar por meio de doações de itens essenciais (higiene, alimentação, roupas etc.) . Durante a primeira versão do projeto optamos por escolher São Carlos como região para implantação de teste. 
 <p align="justify">
 <strong>Bairro escolhido</strong>: Cidade Aracy <br/>
 <strong>Centro de distribuição escolhido</strong>: Centro Comunitário do Cidade Aracy (CRAS: Cidade Aracy)<br/>
