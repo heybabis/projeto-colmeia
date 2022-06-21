@@ -21,6 +21,15 @@ aproximadamente 9495ha/km², enquanto que a densidade populacional de São Carlo
 reais em 2010, ou seja, menor do que o salário mínimo do ano analisado (510,00 reais) (BRASIL,
 2010).</p>
 
+<h3> Diagrama de Classes </h3> 
+<img src="https://user-images.githubusercontent.com/12634138/174898742-865e0156-c502-4eb6-a3b8-df6c418c88a8.jpg" ><br>
+                                                                                                  
+<h3> Modelo Lógico </h3> 
+<img src="https://user-images.githubusercontent.com/12634138/174898841-ac7f1cbb-d006-4d45-9e15-671c9fcc49e5.png" ><br>
+                                                                                             
+
+
+
 <strong>> :construction: Funcionalidades: Em construção :construction:</strong>
 
 Desenvolvedoras:  
