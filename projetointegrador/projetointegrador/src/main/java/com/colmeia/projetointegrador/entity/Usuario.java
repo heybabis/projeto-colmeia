@@ -1,8 +1,6 @@
 package com.colmeia.projetointegrador.entity;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +12,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.beans.factory.annotation.Value;
 
 @Entity
@@ -50,6 +49,7 @@ public abstract class Usuario  implements Serializable{
 	private String email;
 
 	@NotBlank
+	@CPF
 	@Size(max=11)
 	@Column(name="CPFlUsuario")
 	private int cpf;
@@ -75,6 +75,5 @@ public abstract class Usuario  implements Serializable{
 		this.email = email;
 		this.telefone = telefone;
 		
-		
-	}
+		}
 }

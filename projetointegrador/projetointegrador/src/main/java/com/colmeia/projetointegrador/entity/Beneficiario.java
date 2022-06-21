@@ -19,12 +19,5 @@ public class Beneficiario extends Usuario {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Object selecionarCentroDistribuiçao(){
-		return null;
-		
-	}
-
-	public Object selecionarItens() {
-		return null;
-	}
+	
 }

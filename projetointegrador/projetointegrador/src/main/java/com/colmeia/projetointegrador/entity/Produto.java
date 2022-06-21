@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "tb_Produtos")
 
-public abstract class Produtos  implements Serializable{
+public class Produto  implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	@Id

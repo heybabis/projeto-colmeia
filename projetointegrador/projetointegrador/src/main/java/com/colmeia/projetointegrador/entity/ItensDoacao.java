@@ -3,24 +3,22 @@ package com.colmeia.projetointegrador.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_ItensDoação")
+@Table(name = "tb_ItensDoacao")
 
-public interface ItensDoacao {
+public class ItensDoacao {
 
 		
-	@Column(name="Produtos")
-	public  List<Produtos>produto = new ArrayList<Produtos>();
+	public  List<Produto>produtos = new ArrayList<Produto>();
 	
-	public static final Long idUsuario = null;
+	private Doador doador;
 
-	public static final Long idProduto = null;
 	
+	//private Pedido pedido;
+	//Aqui tínhamos falado sobre criar um id de pedido....mas fiquei com dúvida
 	
-	//DUVIDAS AQUI!!//
 	
 }

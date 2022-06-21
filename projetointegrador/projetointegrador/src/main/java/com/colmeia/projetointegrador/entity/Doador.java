@@ -1,6 +1,6 @@
 package com.colmeia.projetointegrador.entity;
 
-public class Doador extends Usuario implements ItensDoacao{
+public class Doador extends Usuario {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -9,11 +9,6 @@ public class Doador extends Usuario implements ItensDoacao{
 		super(id, nome, sobrenone, nomeSocial, email, cpf, telefone);
 	
 	}
-
-	public Object doarItens() {
-		return null;
-	}
-	
 
 	
 	
