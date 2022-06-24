@@ -1,8 +1,6 @@
 <p align="center" >
  <img src="https://user-images.githubusercontent.com/12634138/175530232-654ba234-51c6-42e7-8873-99c2130acb92.png"  width="200"/> 
 </p>
-
-
 <h1  align="center" style="font-color:powderblue" >Projeto Colméia </h1>
 <h3 align="center">Página web que conecta doadores a beneficiários na cidade de São Carlos - SP </h3>
 <p align="center">
