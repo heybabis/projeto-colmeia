@@ -1,7 +1,6 @@
 <p align="center" >
  <img src="https://user-images.githubusercontent.com/12634138/175530232-654ba234-51c6-42e7-8873-99c2130acb92.png"  width="200"/> 
-</p>
-<h1  align="center" style="font-color:powderblue" >Projeto Colméia </h1>
+<h1  align="center" style="font-color:powderblue" >Projeto Colméia </h1></p>
 <h3 align="center">Página web que conecta doadores a beneficiários na cidade de São Carlos - SP </h3>
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/> </p>
