@@ -1,6 +1,7 @@
 package com.colmeia.projetointegrador.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -52,8 +53,11 @@ public abstract class Usuario  implements Serializable{
 	@CPF
 	@Size(max=11)
 	@Column(name="CPFlUsuario")
-	private int cpf;
+	private String cpf;
 
+	//Na camada controller é preciso colocar a anotação valid
+	
+	
 	//@NotBlank
 	//@Size(max=80)
 	//@Email
@@ -65,7 +69,7 @@ public abstract class Usuario  implements Serializable{
 	@Value("telefone")
 	private String telefone;
 	
-	public Usuario(Long idUsuario, String nome, String sobrenone, String nomeSocial, String email, int cpf, String telefone) {	
+	public Usuario(Long idUsuario, String nome, String sobrenone, String nomeSocial, String email, @NotBlank @CPF @Size(max = 11) String cpf, String telefone) {	
 		super();
 		this.idUsuario = idUsuario;
 		this.nome = nome;
@@ -76,4 +80,79 @@ public abstract class Usuario  implements Serializable{
 		this.telefone = telefone;
 		
 		}
+
+	public Long getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Long idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getSobrenome() {
+		return sobrenome;
+	}
+
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+
+	public String getNomeSocial() {
+		return nomeSocial;
+	}
+
+	public void setNomeSocial(String nomeSocial) {
+		this.nomeSocial = nomeSocial;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(@NotBlank @CPF @Size(max = 11) String cpf) {
+		this.cpf = cpf;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Usuario other = (Usuario) obj;
+		return Objects.equals(email, other.email) && Objects.equals(idUsuario, other.idUsuario) && Objects.equals(nome, other.nome)
+				&& Objects.equals(nomeSocial, other.nomeSocial) && Objects.equals(sobrenome, other.sobrenome)&&Objects.equals(cpf, other.cpf);
+	}
+
+
 }

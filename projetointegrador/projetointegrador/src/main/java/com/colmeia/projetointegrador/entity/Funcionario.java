@@ -6,6 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.br.CPF;
 
 @Entity
 @Table(name = "tb_Funcionario")
@@ -22,7 +26,7 @@ public class Funcionario extends Usuario {
 	private Long idCentroDistribuicao;
 	
 		
-	public Funcionario(Long idUsuario, String nome, String sobrenone, String nomeSocial, String email, int cpf,
+	public Funcionario(Long idUsuario, String nome, String sobrenone, String nomeSocial, String email, @NotBlank @CPF @Size(max = 11) String cpf,
 			String telefone) {
 		super(idUsuario, nome, sobrenone, nomeSocial, email, cpf, telefone);
 		// TODO Auto-generated constructor stub

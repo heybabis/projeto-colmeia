@@ -9,6 +9,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.br.CPF;
+
 @Entity
 @Table(name = "tb_Doador")
 
@@ -28,7 +30,7 @@ public class Doador extends Usuario {
 	
 	
 		
-	public Doador(Long id, String nome, String sobrenone, String nomeSocial, String email, int cpf, String telefone) {
+	public Doador(Long id, String nome, String sobrenone, String nomeSocial, String email, @NotBlank @CPF @Size(max = 11) String cpf, String telefone) {
 		super(id, nome, sobrenone, nomeSocial, email, cpf, telefone);
 	
 	}

@@ -23,7 +23,7 @@ public class Beneficiario extends Usuario {
 	//Agenda de retirada de produtos.
 	
 	
-	public Beneficiario(Long idUsuario, String nome, String sobrenone, String nomeSocial, String email, int cpf,
+	public Beneficiario(Long idUsuario, String nome, String sobrenone, String nomeSocial, String email, String cpf,
 			String telefone) {
 		super(idUsuario, nome, sobrenone, nomeSocial, email, cpf, telefone);
 		// TODO Auto-generated constructor stub
