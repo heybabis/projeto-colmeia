@@ -1,0 +1,33 @@
+package com.colmeia.projetointegrador.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_Funcionario")
+
+public class Funcionario extends Usuario {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idFuncionario")
+	private Long idFuncionario;
+	
+	
+	@Column(name="idCentroDistribuicao")
+	private Long idCentroDistribuicao;
+	
+		
+	public Funcionario(Long idUsuario, String nome, String sobrenone, String nomeSocial, String email, int cpf,
+			String telefone) {
+		super(idUsuario, nome, sobrenone, nomeSocial, email, cpf, telefone);
+		// TODO Auto-generated constructor stub
+	}
+
+	private static final long serialVersionUID = 1L;
+
+}

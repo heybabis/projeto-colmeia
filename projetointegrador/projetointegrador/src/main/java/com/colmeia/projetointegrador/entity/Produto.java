@@ -22,15 +22,11 @@ public class Produto  implements Serializable{
 	@Column(name="idProduto")
 	private Long idProduto;
 	
-
-	@NotBlank
-	@Size(max=20)
-	@Column(name="nomeItem")
-	private String nomeItem;
 	
-	@NotBlank
-	@Column(columnDefinition ="qtde")
-	private int quantidade;
+	@Column(name="UnidadeDeMedida")
+	private String unidade; 
+
+	//Aqui eu gostaria que tivesse uma caixinha com as opções: pacote e kg. 
 	
 	
 	@NotBlank
@@ -38,5 +34,7 @@ public class Produto  implements Serializable{
 	@Column(name="categoria")
 	private String categoria;
 	//Aqui, gostaria de ter as opções: higiene ou alimentação - ????
+	
+		
 		
 }

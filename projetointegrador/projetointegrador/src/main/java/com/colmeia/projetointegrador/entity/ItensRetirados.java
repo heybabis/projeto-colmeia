@@ -10,28 +10,26 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name = "tb_ItensDoacao")
+@Table(name = "tb_Produtos")
 
-public class ItensDoacao {
-
-	@Column(name="Lista_Produtos")	
+public class ItensRetirados {
+	
+	
+	@Column(name="Produtos")	
 	private  List<Produto>produtos = new ArrayList<Produto>();
 	
-	@Column(name="idDoador")
-	private Long idDoador;
+	@Column(name="idProduto")
+	private Long idProduto;
 	
-	//@Column(name="idCentroDistribuicao")
-	//private Long idCentroDeDistribuicao;
+	@Column(name="idBeneficiario")
+	private Long idBeneficiario;
 	
-	@Column(name="quantidade")
-	private int qtde;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="idItensDoacao")
-	private Long idUtensDiacao;
-	
-			
+	@Column(name="idItensRetirados")
+	private Long idItensRetirados;
 	
 }

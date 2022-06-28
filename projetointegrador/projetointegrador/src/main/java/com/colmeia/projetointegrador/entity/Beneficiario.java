@@ -1,6 +1,16 @@
 package com.colmeia.projetointegrador.entity;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Beneficiario extends Usuario {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idBeneficiario")
+	private Long idBeneficiario;
 	
 	private static final long serialVersionUID = 1L;
 	
