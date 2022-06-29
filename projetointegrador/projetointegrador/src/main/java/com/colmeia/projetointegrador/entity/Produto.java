@@ -36,10 +36,6 @@ public class Produto implements Serializable {
 	@Column(name = "nome_categoria")
 	private String categoria;
 	
-	public Produto() {
-		
-	}
-
 	public Produto(Long id, @NotBlank @Size(max = 35) String nomeItem, @NotBlank Integer quantidade,
 			@NotBlank @Size(max = 20) String categoria) {
 		this.id = id;
