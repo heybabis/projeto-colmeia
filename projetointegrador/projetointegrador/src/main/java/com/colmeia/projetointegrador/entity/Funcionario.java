@@ -24,7 +24,8 @@ public class Funcionario extends Usuario {
 	
 	@Column(name="idCentroDistribuicao")
 	private Long idCentroDistribuicao;
-	
+	 
+
 		
 	public Funcionario(Long idUsuario, String nome, String sobrenone, String nomeSocial, String email, @NotBlank @CPF @Size(max = 11) String cpf,
 			String telefone) {

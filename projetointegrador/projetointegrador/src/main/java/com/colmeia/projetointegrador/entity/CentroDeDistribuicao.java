@@ -22,7 +22,7 @@ public class CentroDeDistribuicao implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_centroDeDistribuicao")
 	private Long id;
-// 
+
 	@NotBlank
 	@Size(max=80)
 	@Column(name="funcionario")
