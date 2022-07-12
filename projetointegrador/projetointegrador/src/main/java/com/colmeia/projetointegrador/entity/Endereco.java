@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-
+// comentário de exemplo 
 @Entity
 @Table(name = "tb_enderecos")
 public class Endereco implements Serializable {
