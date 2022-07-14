@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -21,7 +22,7 @@ public class Funcionario extends Usuario {
 	@Column(name="idFuncionario")
 	private Long idFuncionario;
 	
-	
+	@OneToOne
 	@Column(name="idCentroDistribuicao")
 	private Long idCentroDistribuicao;
 	 
@@ -35,4 +36,23 @@ public class Funcionario extends Usuario {
 
 	private static final long serialVersionUID = 1L;
 
+
+
+	public Long getIdFuncionario() {
+		return idFuncionario;
+	}
+
+	public void setIdFuncionario(Long idFuncionario) {
+		this.idFuncionario = idFuncionario;
+	}
+
+	public Long getIdCentroDistribuicao() {
+		return idCentroDistribuicao;
+	}
+
+	public void setIdCentroDistribuicao(Long idCentroDistribuicao) {
+		this.idCentroDistribuicao = idCentroDistribuicao;
+	}
+	
+	
 }
