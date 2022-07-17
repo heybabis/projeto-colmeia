@@ -1,6 +1,8 @@
 package com.colmeia.projetointegrador.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -58,18 +60,17 @@ public abstract class Usuario  implements Serializable{
 	//Na camada controller é preciso colocar a anotação valid
 	
 	
-	//@NotBlank
-	//@Size(max=80)
-	//@Email
-	//@Column(name="enderecolUsuario")
-	//private  List<Endereco>enderecos = new ArrayList<Endereco>();;
+	@NotBlank
+	@Size(max=80)
+	@Column(name="enderecolUsuario")
+	private  List<Endereco>enderecos = new ArrayList<Endereco>();;
 
 	@NotBlank
 	@Size(max=11)
 	@Value("telefone")
 	private String telefone;
 	
-	public Usuario(Long idUsuario, String nome, String sobrenone, String nomeSocial, String email, @NotBlank @CPF @Size(max = 11) String cpf, String telefone) {	
+	public Usuario(Long idUsuario, String nome, String sobrenome, String nomeSocial, String email, @NotBlank @CPF @Size(max = 11) String cpf, String telefone) {	
 		super();
 		this.idUsuario = idUsuario;
 		this.nome = nome;
