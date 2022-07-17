@@ -1,50 +1,30 @@
-package com.colmeia.projetointegrador.entity;
+package com.colmeia.projetointegrador.dto;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import com.colmeia.projetointegrador.entity.Produto;
 
-@Entity
-@Table(name = "tb_produtos")
-public class Produto implements Serializable {
+public class ProdutoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_produto")
 	private Long id;
-
-	@NotBlank
-	@Size(max = 35)
-	@Column(name = "nome_item")
 	private String nomeItem;
-
-	@NotBlank
 	private Integer quantidade;
-
-	@NotBlank
-	@Size(max = 20)
-	@Column(name = "nome_categoria")
 	private String categoria;
-	
-	public Produto() {
-		
+
+	public ProdutoDTO(Produto produto) {
+		this.id = produto.getId();
+		this.nomeItem = produto.getNomeItem();
+		this.quantidade = produto.getQuantidade();
+		this.categoria = produto.getCategoria();
+
 	}
-	
-	public Produto(Long id, @NotBlank @Size(max = 35) String nomeItem, @NotBlank Integer quantidade,
-			@NotBlank @Size(max = 20) String categoria) {
-		this.id = id;
-		this.nomeItem = nomeItem;
-		this.quantidade = quantidade;
-		this.categoria = categoria;
+
+	public static List<ProdutoDTO> converterLista(List<Produto> produtos) {
+		return produtos.stream().map(ProdutoDTO::new).collect(Collectors.toList());
 	}
 
 	public Long getId() {
@@ -92,7 +72,7 @@ public class Produto implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Produto other = (Produto) obj;
+		ProdutoDTO other = (ProdutoDTO) obj;
 		return Objects.equals(categoria, other.categoria) && Objects.equals(id, other.id)
 				&& Objects.equals(nomeItem, other.nomeItem) && Objects.equals(quantidade, other.quantidade);
 	}
