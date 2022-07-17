@@ -1,50 +1,35 @@
-package com.colmeia.projetointegrador.entity;
-
+package com.colmeia.projetointegrador.dto;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.colmeia.projetointegrador.entity.ItensDoacao;
+import com.colmeia.projetointegrador.entity.Produto;
 
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
-
-@Entity
-@Table(name = "tb_itens_doacao")
-public class ItensDoacao implements Serializable {
+public class ItensDoacaoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_itens_doacao")
 	private Long id;
-
-	@Column(name = "id_doador")
 	private Long idDoador;
-
-	@Column(name = "id_centro_distribuicao")
 	private Long idCentroDeDistribuicao;
-
-	@NotBlank
 	private Integer quantidade;
-
+	
 	private List<Produto> produtos = new ArrayList<>();
 
-	public ItensDoacao(Long id, Long idDoador, Long idCentroDeDistribuicao, @NotBlank Integer quantidade,
-			List<Produto> produtos) {
-		this.id = id;
-		this.idDoador = idDoador;
-		this.idCentroDeDistribuicao = idCentroDeDistribuicao;
-		this.quantidade = quantidade;
-		this.produtos = produtos;
+	public ItensDoacaoDTO(ItensDoacao itensDoacao) {
+		this.id = itensDoacao.getId();
+		this.idDoador = itensDoacao.getIdDoador();
+		this.idCentroDeDistribuicao = itensDoacao.getIdCentroDeDistribuicao();
+		this.quantidade = itensDoacao.getQuantidade();
+		this.produtos = itensDoacao.getProdutos();
+
+	}
+
+	public static List<ItensDoacaoDTO> converterLista(List<ItensDoacao> itensDoacao) {
+		return itensDoacao.stream().map(ItensDoacaoDTO::new).collect(Collectors.toList());
 	}
 
 	public Long getId() {
@@ -96,9 +81,10 @@ public class ItensDoacao implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ItensDoacao other = (ItensDoacao) obj;
+		ItensDoacaoDTO other = (ItensDoacaoDTO) obj;
 		return Objects.equals(id, other.id) && Objects.equals(idCentroDeDistribuicao, other.idCentroDeDistribuicao)
 				&& Objects.equals(idDoador, other.idDoador) && Objects.equals(produtos, other.produtos)
 				&& Objects.equals(quantidade, other.quantidade);
 	}
+
 }
