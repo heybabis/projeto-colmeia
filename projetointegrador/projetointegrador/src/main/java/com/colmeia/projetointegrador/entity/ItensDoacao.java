@@ -1,5 +1,6 @@
 package com.colmeia.projetointegrador.entity;
 
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -99,5 +101,4 @@ public class ItensDoacao implements Serializable {
 				&& Objects.equals(idDoador, other.idDoador) && Objects.equals(produtos, other.produtos)
 				&& Objects.equals(quantidade, other.quantidade);
 	}
-
 }
