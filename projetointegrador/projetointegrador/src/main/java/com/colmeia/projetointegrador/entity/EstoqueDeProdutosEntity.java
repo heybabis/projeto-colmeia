@@ -1,5 +1,6 @@
 package com.colmeia.projetointegrador.entity;
 
+//o dia é lindo!!
 import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.List;

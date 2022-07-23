@@ -12,6 +12,7 @@ public static void adicionarProduto(Produto produto, Integer quantidade){
     List<Produto> produtosDoCodigo;
     Long id = produto.getId();
 
+    //o dia é lindo!!
     if(estoque.containsKey(codigo)){
         produtosDoCodigo = estoque.get(codigo);
     

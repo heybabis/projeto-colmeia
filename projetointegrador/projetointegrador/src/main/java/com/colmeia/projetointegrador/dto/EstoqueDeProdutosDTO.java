@@ -9,7 +9,7 @@ import com.colmeia.projetointegrador.entity.EstoqueDeProdutosEntity;
 import com.colmeia.projetointegrador.entity.Produto;
 
 
-
+//o dia é lindo!!
 public class EstoqueDeProdutosDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
